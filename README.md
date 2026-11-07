@@ -1,16 +1,16 @@
-# RoKo – A Large Corpus of German-language Novels (1790–1915)
+# GLANCE: A Corpus of German-Language Novels from the Long Nineteenth Century
 
-RoKo is a corpus of German-language novels from the period 1790–1915, compiled as part of a PhD in *Computational Literary Studies*. It contains 1,834 texts by 545 authors, with almost 153 million tokens (excluding punctuation).
+GLANCE is a corpus of German-language novels from the period 1790–1915, compiled as part of a PhD in *Computational Literary Studies*. It contains 1,834 texts by 545 authors, with almost 153 million tokens (excluding punctuation).
 
-RoKo is not yet perfect, and neither is this documentation. The background to specific decisions and detailed information on the individual steps of the procedure will be given in my dissertation. If anything is unclear in the meantime, please feel free to contact me (agnes.hilger@uni-wuerzburg.de).
+GLANCE is not yet perfect, and neither is this documentation. The background to specific decisions and detailed information on the individual steps of the procedure will be given in my dissertation. If anything is unclear in the meantime, please feel free to contact me (agnes.hilger@uni-wuerzburg.de).
 
 ## Citation
 
-If you use RoKo in your research, please cite it as follows:
+If you use GLANCE in your research, please cite it as follows:
 
-Hilger, Agnes: RoKo – A Large Corpus of German-language Novels (1790–1915), version 1.0, 2026. Zenodo. https://doi.org/https://doi.org/10.5281/zenodo.23539456
+Hilger, Agnes. "GLANCE: A Corpus of German-Language Novels from the Long Nineteenth Century". Zenod, 2026. https://doi.org/10.5281/zenodo.23539456.
 
-Please also acknowledge the sources RoKo draws on: Projekt Gutenberg-DE, Project Gutenberg, the Deutsches Textarchiv (DTA), TextGrid, and the following corpora:
+Please also acknowledge the sources GLANCE draws on: Projekt Gutenberg-DE, Project Gutenberg, the Deutsches Textarchiv (DTA), TextGrid, and the following corpora:
 
 Boucher, Marie-Christine, J. Berenike Herrmann, Alexander Hummel, and James Wiebe. „Bildungsromankorpus“. Zenodo, 2024. https://doi.org/10.5281/ZENODO.14289198.
 
@@ -30,7 +30,7 @@ Rohrbacher, Katrin. „De-Corp: A Corpus of German-Language Fiction and Non-Fict
 
 ## Corpus design and construction
 
-RoKo uses a historical concept of the novel (following Schröter 2019, 2026) and consists of two sub-corpora:
+GLANCE uses a historical concept of the novel (following Schröter 2019, 2026) and consists of two sub-corpora:
 
 - The **core corpus** contains texts that are labelled as a novel (*Roman*, or a compound such as *Briefroman*) in their title or paratext.
 - The **extension corpus** contains texts without this label that correspond to the assumed prototype of the novel in the period: fictional narrative prose of at least 32,000 words.
@@ -105,14 +105,14 @@ All texts are provided as UTF-8-encoded plain text files (`.txt`) in two version
 
 ## Limitations
 
-RoKo underwent substantial cleaning. Nonetheless, it should not be expected to be flawless. Four problems are likely to be the most relevant:
+GLANCE underwent substantial cleaning. Nonetheless, it should not be expected to be flawless. Four problems are likely to be the most relevant:
 
 1. **Non-novels in the extension corpus.** This is likely to concern above all collections of shorter narrative texts and factual texts that were wrongly classified as novels. With the help of agentic AI tools and repeated manual review, many such texts were identified and removed during corpus construction. Experience shows, however, that some will remain.
-2. **Incorrect years.** The column `year` is intended to give the year of first publication. For texts taken from the DTA and TextGrid, the quality should be very good: the DTA digitised first editions, and for TextGrid the year was taken from the editorial note on the first printing (*Erstdruck*) that accompanies each text, even though the text itself often follows a later edition. For texts going back to Project Gutenberg, however, the quality is mixed: it is not always clear whether the year refers to the first publication or to a later edition, and in some cases it may simply be wrong. In addition, DeCorp estimated missing years from the authors' life dates, and a few years in RoKo are estimates as well (see `year_source`). Where possible, I have already made minor corrections. A more extensive correction on a more reliable philological basis is planned for a future release.
+2. **Incorrect years.** The column `year` is intended to give the year of first publication. For texts taken from the DTA and TextGrid, the quality should be very good: the DTA digitised first editions, and for TextGrid the year was taken from the editorial note on the first printing (*Erstdruck*) that accompanies each text, even though the text itself often follows a later edition. For texts going back to Project Gutenberg, however, the quality is mixed: it is not always clear whether the year refers to the first publication or to a later edition, and in some cases it may simply be wrong. In addition, DeCorp estimated missing years from the authors' life dates, and a few years in GLANCE are estimates as well (see `year_source`). Where possible, I have already made minor corrections. A more extensive correction on a more reliable philological basis is planned for a future release.
 3. **Duplicates.** Despite several rounds of deduplication, some works may still be contained more than once (e.g. in different editions or under different titles).
 4. **Normalisation errors.** The automatic normalisation in `txt_normalized/` is not error-free; for example, compounds written separately in historical spelling are not always joined, and proper names are occasionally altered.
 
-If you notice such errors while working with RoKo, I would be grateful for any hints and observations, so that future releases can provide improved versions.
+If you notice such errors while working with GLANCE, I would be grateful for any hints and observations, so that future releases can provide improved versions.
 
 ---
 
@@ -130,7 +130,7 @@ Schröter, Julian. „Gattungsgeschichte und ihr Gattungsbegriff am Beispiel der
 
 ## Licence
 
-RoKo (metadata and documentation) is published under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The full texts are in the public domain in Germany; where the source collections publish their digitisations under a licence, that licence applies: TextGrid texts are available under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), DTA texts under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), and texts from the Bildungsroman corpus under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The literary works from Project Gutenberg and Projekt Gutenberg-DE are in the public domain; the texts were taken over, largely via DeCorp (Rohrbacher 2025), as in other research corpora.
+GLANCE (metadata and documentation) is published under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The full texts are in the public domain in Germany; where the source collections publish their digitisations under a licence, that licence applies: TextGrid texts are available under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), DTA texts under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), and texts from the Bildungsroman corpus under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The literary works from Project Gutenberg and Projekt Gutenberg-DE are in the public domain; the texts were taken over, largely via DeCorp (Rohrbacher 2025), as in other research corpora.
 
 ---
 
